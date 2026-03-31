@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A962;
+  --gold-light: #E8D5A3;
+  --gold-dark: #9A7B3D;
+  --dark: #0A0A0A;
+  --dark-secondary: #141414;
+  --dark-tertiary: #1E1E1E;
+  --cream: #F5F0E8;
+  --cream-dark: #E8E0D5;
+  --white: #FFFFFF;
+  --green: #1B4332;
+  --green-light: #2D5A45;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--dark);
+  color: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(201, 169, 98, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(201, 169, 98, 0.6);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+/* Font family for serif headings */
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 169, 98, 0.3);
+  color: var(--white);
+}
