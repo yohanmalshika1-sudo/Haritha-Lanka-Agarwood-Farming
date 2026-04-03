@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Exclusive Services | Haritha Lanka Plantation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --luxury-gold: #d4af37;
+            --luxury-gold-light: #f4e4bc;
+            --luxury-gold-dark: #aa8c2c;
+            --luxury-black: #0a0a0a;
+            --luxury-dark: #1a1a1a;
+            --luxury-gray: #2d2d2d;
+            --luxury-cream: #f5f5dc;
+            --luxury-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Sinhala', 'Cormorant Garamond', serif;
+            background: var(--luxury-black);
+            color: var(--luxury-cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Luxury Loading Screen */
+        .luxury-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--luxury-black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+
+        .luxury-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--luxury-gold);
+            letter-spacing: 8px;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .loader-line {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loader-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--luxury-white), transparent);
+            animation: loading 2s infinite;
+        }
+
+        @keyframes loading {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Animated Background */
+        .luxury-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(170, 140, 44, 0.05) 0%, transparent 70%);
+        }
+
+        .floating-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--luxury-gold);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float-particle 20s infinite ease-in-out;
+            box-shadow: 0 0 10px var(--luxury-gold);
+        }
+
+        .floating-particle:nth-child(2) { left: 10%; animation-delay: 0s; top: 20%; }
+        .floating-particle:nth-child(3) { left: 30%; animation-delay: 5s; top: 60%; }
+        .floating-particle:nth-child(4) { left: 50%; animation-delay: 10s; top: 30%; }
+        .floating-particle:nth-child(5) { left: 70%; animation-delay: 15s; top: 70%; }
+        .floating-particle:nth-child(6) { left: 90%; animation-delay: 7s; top: 40%; }
+
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        /* Navigation */
+        .luxury-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--luxury-gold);
+            text-decoration: none;
+            letter-spacing: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .nav-logo:hover {
+            color: var(--luxury-gold-light);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .nav-logo i {
+            font-size: 1.5rem;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--luxury-cream);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-back::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--luxury-gold);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .nav-back:hover::before {
+            left: 0;
+        }
+
+        .nav-back:hover {
+            color: var(--luxury-black);
+            border-color: var(--luxury-gold);
+        }
+
+        /* Main Container */
+        .luxury-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .luxury-hero {
+            text-align: center;
+            margin-bottom: 5rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: heroReveal 1.2s ease forwards 0.5s;
+        }
+
+        @keyframes heroReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--luxury-gold);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .hero-subtitle::before,
+        .hero-subtitle::after {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: var(--luxury-white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            color: var(--luxury-gold);
+            font-style: italic;
+        }
+
+        .hero-divider {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
+            margin: 2rem auto;
+        }
+
+        /* Main Content Card */
+        .luxury-card {
+            background: linear-gradient(135deg, rgba(26,26,26,0.95), rgba(45,45,45,0.9));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(60px);
+            animation: cardReveal 1s ease forwards 0.8s;
+        }
+
+        @keyframes cardReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), var(--luxury-gold-light), var(--luxury-gold), transparent);
+        }
+
+        .card-corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--luxury-gold);
+            opacity: 0.6;
+        }
+
+        .card-corner.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .card-corner.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .card-corner.bottom-left { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .card-corner.bottom-right { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+        .card-header {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(170, 140, 44, 0.05));
+            padding: 4rem 3rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+        }
+
+        .card-header::after {
+            content: '❦';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--luxury-gold);
+            font-size: 1.5rem;
+            background: var(--luxury-gray);
+            padding: 0 1rem;
+        }
+
+        .card-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--luxury-gold-light);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-header .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--luxury-gold);
+            letter-spacing: 3px;
+            font-style: italic;
+        }
+
+        .card-content {
+            padding: 4rem 3rem;
+        }
+
+        /* Introduction */
+        .luxury-intro {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.02));
+            border-left: 3px solid var(--luxury-gold);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            position: relative;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--luxury-cream);
+        }
+
+        .luxury-intro::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--luxury-gold);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        /* Services */
+        .services-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--luxury-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .services-title::before,
+        .services-title::after {
+            content: '◆';
+            color: var(--luxury-gold);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .luxury-services {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .luxury-service {
+            background: linear-gradient(135deg, rgba(45,45,45,0.8), rgba(26,26,26,0.9));
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .luxury-service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), transparent);
+            transition: width 0.5s ease;
+        }
+
+        .luxury-service:hover::before {
+            width: 100%;
+        }
+
+        .luxury-service:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1);
+        }
+
+        .service-number {
+            position: absolute;
+            top: -15px;
+            left: 2.5rem;
+            width: 50px;
+            height: 50px;
+            background: var(--luxury-gold);
+            color: var(--luxury-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border: 3px solid var(--luxury-gray);
+        }
+
+        .service-content {
+            margin-top: 1.5rem;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--luxury-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--luxury-gold);
+            font-size: 1.3rem;
+        }
+
+        .service-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--luxury-gold-light);
+            font-weight: 400;
+        }
+
+        .service-desc {
+            color: var(--luxury-cream);
+            line-height: 2;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-highlight {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 1.5rem;
+            position: relative;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--luxury-gold-light);
+        }
+
+        .service-highlight::before {
+            content: '✦';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--luxury-gray);
+            color: var(--luxury-gold);
+            padding: 0 10px;
+            font-size: 1rem;
+        }
+
+        /* Why Choose Us */
+        .why-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.02));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            pointer-events: none;
+        }
+
+        .why-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--luxury-gold);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .why-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(10, 10, 10, 0.4);
+            border-left: 3px solid var(--luxury-gold);
+            transition: all 0.3s;
+        }
+
+        .why-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateX(5px);
+        }
+
+        .why-icon {
+            color: var(--luxury-gold);
+            font-size: 1.3rem;
+            margin-top: 0.3rem;
+        }
+
+        .why-text {
+            color: var(--luxury-cream);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .luxury-cta {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(170, 140, 44, 0.1));
+            border: 2px solid var(--luxury-gold);
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--luxury-gold-light);
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--luxury-cream);
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: transparent;
+            color: var(--luxury-gold);
+            border: 2px solid var(--luxury-gold);
+            padding: 1.2rem 3rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--luxury-gold);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .cta-button:hover {
+            color: var(--luxury-black);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Footer */
+        .luxury-footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 2rem;
+        }
+
+        .footer-line {
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
+            margin: 0 auto 1.5rem;
+        }
+
+        .footer-text {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--luxury-gold);
+            letter-spacing: 3px;
+            font-size: 1.1rem;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            z-index: 999;
+            font-size: 1.3rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--luxury-gold);
+            color: var(--luxury-black);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .luxury-nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-logo {
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+            }
+
+            .nav-back {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .nav-back span {
+                display: none;
+            }
+
+            .luxury-container {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+                letter-spacing: 4px;
+            }
+
+            .hero-subtitle::before,
+            .hero-subtitle::after {
+                width: 30px;
+            }
+
+            .card-header {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .card-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .card-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .luxury-intro {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+
+            .luxury-service {
+                padding: 1.8rem;
+            }
+
+            .service-title {
+                font-size: 1.3rem;
+            }
+
+            .why-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .luxury-cta {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.6rem;
+            }
+
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--luxury-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--luxury-gold);
+            border-radius: 0;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--luxury-gold-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Luxury Loader -->
+    <div class="luxury-loader" id="loader">
+        <div class="loader-logo">HL PLANTATION</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Luxury Background -->
+    <div class="luxury-bg">
+        <div class="bg-gradient"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="luxury-nav">
+        <a href="main.html" class="nav-logo">
+            <i class="fas fa-crown"></i>
+            HARITHA LANKA
+        </a>
+        <a href="main.html" class="nav-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="luxury-container">
+
+        <!-- Hero Section -->
+        <section class="luxury-hero">
+            <div class="hero-subtitle">Exclusive Services</div>
+            <h1 class="hero-title">
+                Our <span>Premium</span> Offerings
+            </h1>
+            <div class="hero-divider"></div>
+        </section>
+
+        <!-- Main Card -->
+        <article class="luxury-card">
+            <div class="card-corner top-left"></div>
+            <div class="card-corner top-right"></div>
+            <div class="card-corner bottom-left"></div>
+            <div class="card-corner bottom-right"></div>
+
+            <!-- Card Header -->
+            <header class="card-header">
+                <h1>අගාවුඩ් (Agarwood) වගාව සහ සාර්ථක අස්වැන්නක් සඳහා තාක්ෂණික මඟපෙන්වීම</h1>
+                <p class="subtitle">Premium Agarwood Cultivation & Technical Guidance</p>
+            </header>
+
+            <!-- Card Content -->
+            <div class="card-content">
+
+                <!-- Introduction -->
+                <div class="luxury-intro">
+                    ශ්‍රී ලංකාවේ වටිනාම අපනයන බෝගයක් වන අගාවුඩ් (වල්ලපට්ටා) වගාව මගින් ඉහළම ආදායමක් ලැබීමට නම්, නිවැරදි පැල තෝරා ගැනීම මෙන්ම විද්‍යාත්මක ක්‍රමවේද අනුගමනය කිරීම අත්‍යවශ්‍ය වේ. හරිත ලංකා ප්ලැන්ටේෂන් (Haritha Lanka Plantation) අප ආයතනය, පැල ලබාදීමේ සිට අස්වැන්න අලෙවි කරන තෙක් සම්පූර්ණ වගකීමක් පාරිභෝගිකයා වෙත ලබා දේ.
+                </div>
+
+                <!-- Services Title -->
+                <h2 class="services-title">Our Services</h2>
+
+                <!-- Services -->
+                <div class="luxury-services">
+
+                    <!-- Service 1 -->
+                    <div class="luxury-service" onclick="animateService(this)">
+                        <div class="service-number">01</div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3 class="service-title">උසස් ප්‍රභේදයේ අගාවුඩ් පැල ලබාදීම</h3>
+                            </div>
+                            <p class="service-desc">
+                                නීරෝගී සහ වේගයෙන් වැඩෙන උසස්ම තත්ත්වයේ අගාවුඩ් පැල සහනදායී මිලකට (රු. 1,500/- බැගින්) ලබාගත හැක. අවම වශයෙන් පැල 10ක් ඇණවුම් කිරීමෙන් ඔබේ වගාව අදම ආරම්භ කළ හැකියි.
+                            </p>
+                            <div class="service-highlight">
+                                <strong>විශේෂයි:</strong> සියලුම පැල් සහතික කළ ප්‍රභේද වලින් සමන්විතයි
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="luxury-service" onclick="animateService(this)">
+                        <div class="service-number">02</div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-syringe"></i>
+                                </div>
+                                <h3 class="service-title">විද්‍යාත්මක එන්නත්කරණය (Inoculation)</h3>
+                            </div>
+                            <p class="service-desc">
+                                අගාවුඩ් ගසක වටිනාකම තීරණය වන්නේ එහි නිපදවෙන "රෙසින" (Resin) ප්‍රමාණය මතයි. මේ සඳහා ගසට නිවැරදි කාලයේදී විද්‍යාත්මක එන්නත්කරණ (Inoculation) ක්‍රියාවලිය සිදු කළ යුතුය. අප ආයතනය මගින් පළපුරුදු තාක්ෂණික ශිල්පීන් යොදවා මෙම වැක්සීන් (Vaccine) කිරීමේ සේවාව ලබා දෙනු ලැබේ.
+                            </p>
+                            <div class="service-highlight">
+                                <strong>ප්‍රතිඵලය:</strong> ගස තුළ උසස්ම තත්ත්වයේ අගාවුඩ් රෙසින නිපදවීම සහතික කරන අතර, අස්වැන්න උපරිම කරයි.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="luxury-service" onclick="animateService(this)">
+                        <div class="service-number">03</div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3 class="service-title">සහතික කළ නැවත මිලදී ගැනීමේ මිල</h3>
+                            </div>
+                            <p class="service-desc">
+                                ඔබ අපෙන් ලබාගන්නා පැල, ගසක් ලෙස වැඩුණු පසු සහ එන්නත්කරණයෙන් පසු රුපියල් ලක්ෂ 2 ක (200,000/-) සහතික කළ මිලකට අප ආයතනය විසින්ම නැවත මිලදී ගැනීමට ලිඛිත පොරොන්දුවක් ලබා දෙනු ලැබේ.
+                            </p>
+                            <div class="service-highlight">
+                                <strong>සහතිකය:</strong> ලිඛිත ගිවිසුමක් මගින් ඔබගේ ආයෝජනය ආරක්ෂා කර ගන්න
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Why Choose Us -->
+                <section class="why-section">
+                    <h2 class="why-title">ඇයි ඔබ හරිත ලංකා ප්ලැන්ටේෂන් තෝරාගත යුත්තේ?</h2>
+                    <ul class="why-list">
+                        <li class="why-item">
+                            <i class="fas fa-check-circle why-icon"></i>
+                            <span class="why-text">පැල සිටුවීමේ සිට අස්වැන්න දක්වා සම්පූර්ණ තාක්ෂණික උපදේශනය</span>
+                        </li>
+                        <li class="why-item">
+                            <i class="fas fa-check-circle why-icon"></i>
+                            <span class="why-text">විශ්වාසවන්ත සහ නීත්‍යානුකූල නැවත මිලදී ගැනීමේ ගිවිසුම්</span>
+                        </li>
+                        <li class="why-item">
+                            <i class="fas fa-check-circle why-icon"></i>
+                            <span class="why-text">අස්වැන්න අලෙවි කිරීම පිළිබඳව කිසිදු කරදරයකින් තොරව ඉහළ ලාභයක් ලැබීමට ඇති හැකියාව</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="luxury-cta">
+                    <div class="cta-content">
+                        <h2 class="cta-title">අනාගතයේ ලක්ෂපතියෙකු වීමට</h2>
+                        <p class="cta-subtitle">අදම බුද්ධිමත් ආයෝජනයක් කරන්න.</p>
+                        <button class="cta-button" onclick="goToHome()">
+                            <i class="fas fa-home"></i>
+                            Back to Home Page
+                        </button>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+
+        <!-- Footer -->
+        <footer class="luxury-footer">
+            <div class="footer-line"></div>
+            <p class="footer-text">❦ HARITHA LANKA PLANTATION ❦</p>
+        </footer>
+    </div>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Remove loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Scroll to top visibility
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 400) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goToHome() {
+            const btn = document.querySelector('.cta-button');
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                window.location.href = 'main.html';
+            }, 300);
+        }
+
+        function animateService(element) {
+            element.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                element.style.transform = '';
+            }, 150);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.luxury-service').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `all 0.6s ease ${i * 0.15}s`;
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.why-item').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-30px)';
+            el.style.transition = `all 0.5s ease ${i * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Console elegance
+        console.log('%c❦ HARITHA LANKA PLANTATION ❦', 'color: #d4af37; font-size: 24px; font-family: serif;');
+        console.log('%cLuxury Services Experience', 'color: #f4e4bc; font-size: 14px; font-style: italic;');
+    </script>
+
+</body>
+</html>
