@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Haritha Lanka Agarwood Plantation - Sri Lanka's Premier Oud Investment</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Discover Haritha Lanka Agarwood Plantation - Sri Lanka's leading Agarwood (Oud) investment company. Learn about our mission, premium Gyrinops walla saplings, scientific inoculation, and guaranteed buy-back agreements.">
+    <meta name="keywords" content="Haritha Lanka, Agarwood plantation Sri Lanka, Oud investment, Gyrinops walla, Agarwood trees, Agarwood buy back, Sri Lanka plantation, Agarwood oil, oud oil, luxury investment Sri Lanka">
+    <meta name="author" content="Haritha Lanka Plantation">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harithalankaplantation.com/about">
+    <meta property="og:title" content="About Us | Haritha Lanka Agarwood Plantation">
+    <meta property="og:description" content="Sri Lanka's premier Agarwood investment company. Premium quality plants, scientific inoculation & guaranteed buy-back agreements.">
+    <meta property="og:image" content="https://harithalankaplantation.com/images/og-about.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://harithalankaplantation.com/about">
+    <meta property="twitter:title" content="About Us | Haritha Lanka Agarwood Plantation">
+    <meta property="twitter:description" content="Transform your idle land into a golden investment with Sri Lanka's leading Agarwood plantation company.">
+    <meta property="twitter:image" content="https://harithalankaplantation.com/images/og-about.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://harithalankaplantation.com/about">
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="https://harithalankaplantation.com/about">
+    <link rel="alternate" hreflang="si" href="https://harithalankaplantation.com/about?lang=si">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #9A7B3D;
+            --dark: #0A0A0A;
+            --dark-secondary: #141414;
+            --dark-tertiary: #1E1E1E;
+            --cream: #F5F0E8;
+            --cream-dark: #E8E0D5;
+            --white: #FFFFFF;
+            --green: #1B4332;
+            --green-light: #2D5A45;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', 'Noto Sans Sinhala', sans-serif;
+            background: var(--dark);
+            color: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+            border-radius: 4px;
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--dark);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .preloader.hidden { opacity: 0; visibility: hidden; }
+        .preloader-logo {
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse-gold 2s infinite;
+        }
+        .preloader-logo i { font-size: 2rem; color: var(--gold); }
+        .preloader-text {
+            margin-top: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 98, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(201, 169, 98, 0.6); }
+        }
+
+        /* Navigation */
+        .nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-wrapper.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 3rem;
+            border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+        }
+        .nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+        .logo:hover .logo-icon {
+            background: var(--gold);
+            transform: rotate(360deg);
+        }
+        .logo:hover .logo-icon i { color: var(--dark); }
+        .logo-icon i { font-size: 1.2rem; color: var(--gold); transition: all 0.4s ease; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+        .logo-subtitle {
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 3rem; align-items: center; }
+        .nav-link {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover { color: var(--gold); }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link.active { color: var(--gold); }
+        .nav-link.active::after { width: 100%; }
+        .mobile-menu-btn { display: none; color: var(--gold); font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero {
+            min-height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(27,67,50,0.8) 50%, rgba(10,10,10,0.95) 100%);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/plantation-aerial.jpg') center/cover;
+            opacity: 0.3;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 8rem 2rem 4rem;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 2rem;
+            border: 1px solid var(--gold);
+            border-radius: 50px;
+            margin-bottom: 2rem;
+        }
+        .hero-badge i { color: var(--gold); font-size: 0.9rem; }
+        .hero-badge span {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        .hero-title span { color: var(--gold); font-style: italic; }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(245, 240, 232, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1.5rem 3rem;
+            background: var(--dark-secondary);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+        }
+        .breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+        .breadcrumb a {
+            color: rgba(245, 240, 232, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover { color: var(--gold); }
+        .breadcrumb i { color: var(--gold); font-size: 0.7rem; }
+        .breadcrumb span { color: var(--gold); }
+
+        /* Sections */
+        .section { padding: 6rem 2rem; position: relative; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold));
+        }
+        .section-label::before { right: calc(100% + 1rem); }
+        .section-label::after { left: calc(100% + 1rem); background: linear-gradient(90deg, var(--gold), transparent); }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: rgba(245, 240, 232, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+        .about-image img { width: 100%; height: auto; display: block; transition: transform 0.8s ease; }
+        .about-image:hover img { transform: scale(1.05); }
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            transform: translate(20px, 20px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .about-content h2 span { color: var(--gold); }
+        .about-content p {
+            color: rgba(245, 240, 232, 0.8);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        .about-content .sinhala {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        /* Features */
+        .features-section { background: linear-gradient(180deg, var(--dark-secondary) 0%, var(--dark) 100%); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: var(--dark-tertiary);
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-card:hover {
+            border-color: rgba(201, 169, 98, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(201, 169, 98, 0.05) 100%);
+            border: 1px solid rgba(201, 169, 98, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--gold);
+            transition: all 0.4s ease;
+        }
+        .feature-card:hover .feature-icon {
+            background: var(--gold);
+            color: var(--dark);
+            transform: rotate(360deg);
+        }
+        .feature-title { font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem; }
+        .feature-title.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; font-size: 1.3rem; }
+        .feature-desc { font-size: 0.95rem; color: rgba(245, 240, 232, 0.7); line-height: 1.7; }
+        .feature-desc.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; font-size: 1rem; }
+
+        /* Mission */
+        .mission-section { background: var(--dark); position: relative; overflow: hidden; }
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .mission-card {
+            background: var(--dark-tertiary);
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+        }
+        .mission-card::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-top: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+            opacity: 0.3;
+        }
+        .mission-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .mission-title { font-size: 2rem; color: var(--white); margin-bottom: 1.5rem; }
+        .mission-title.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; font-size: 1.8rem; }
+        .mission-text { color: rgba(245, 240, 232, 0.8); font-size: 1.05rem; line-height: 1.8; }
+        .mission-text.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; line-height: 2; }
+
+        /* Stats */
+        .stats-section {
+            background: linear-gradient(135deg, var(--dark-secondary) 0%, var(--dark-tertiary) 100%);
+            padding: 4rem 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stat-item { padding: 1rem; }
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label { font-size: 0.9rem; color: rgba(245, 240, 232, 0.7); text-transform: uppercase; letter-spacing: 0.1em; }
+        .stat-label.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; text-transform: none; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(27, 67, 50, 0.2) 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+        }
+        .cta-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 1.5rem; }
+        .cta-title span { color: var(--gold); }
+        .cta-text { color: rgba(245, 240, 232, 0.8); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; }
+        .cta-text.sinhala { font-family: 'Noto Sans Sinhala', sans-serif; }
+        .btn-luxury {
+            padding: 1rem 2.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: none;
+        }
+        .btn-primary-luxury {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--dark);
+        }
+        .btn-primary-luxury:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(201, 169, 98, 0.4); }
+        .btn-outline-luxury {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            margin-left: 1rem;
+        }
+        .btn-outline-luxury:hover { background: var(--gold); color: var(--dark); transform: translateY(-3px); }
+
+        /* Footer */
+        .footer { background: var(--dark); padding: 5rem 2rem 2rem; border-top: 1px solid rgba(201, 169, 98, 0.1); }
+        .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .footer-tagline { font-size: 0.9rem; color: rgba(245, 240, 232, 0.6); font-style: italic; margin-bottom: 2rem; }
+        .footer-social { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+        .footer-social a {
+            width: 50px;
+            height: 50px;
+            background: rgba(201, 169, 98, 0.1);
+            border: 1px solid rgba(201, 169, 98, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+        }
+        .footer-social a:hover { background: var(--gold); color: var(--dark); transform: translateY(-5px); }
+        .footer-contact { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin-bottom: 2rem; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(201, 169, 98, 0.1); }
+        .footer-bottom p { font-size: 0.8rem; color: rgba(245, 240, 232, 0.4); }
+
+        /* Floating Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.4s ease;
+            animation: pulse-whatsapp 2s infinite;
+            text-decoration: none;
+        }
+        @keyframes pulse-whatsapp {
+            0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+            50% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5); }
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .scroll-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 998;
+        }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { background: var(--gold-light); transform: scale(1.1); }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.98);
+            z-index: 9999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .mobile-menu a:hover { color: var(--gold); }
+        .mobile-close { position: absolute; top: 2rem; right: 2rem; color: var(--gold); font-size: 2rem; cursor: pointer; }
+
+        /* Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-grid, .mission-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image { max-width: 600px; margin: 0 auto; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-wrapper { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .section { padding: 4rem 1.5rem; }
+            .hero-content { padding: 6rem 1.5rem 3rem; }
+            .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mission-grid { gap: 2rem; }
+            .mission-card { padding: 2rem; }
+            .btn-outline-luxury { margin-left: 0; margin-top: 1rem; }
+            .cta-section { padding: 4rem 1.5rem; }
+            .hero-badge { padding: 0.5rem 1rem; flex-wrap: wrap; }
+            .hero-badge span { font-size: 0.7rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-title { font-size: clamp(1.8rem, 10vw, 2.5rem); }
+            .hero-badge { padding: 0.4rem 0.8rem; }
+            .hero-badge span { font-size: 0.65rem; letter-spacing: 0.05em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo"><i class="fas fa-leaf"></i></div>
+        <div class="preloader-text">Haritha Lanka</div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></div>
+        <a href="main.html" onclick="toggleMobileMenu()">Home</a>
+        <a href="about.html" onclick="toggleMobileMenu()">About Us</a>
+        <a href="main.html#packages" onclick="toggleMobileMenu()">Investment</a>
+        <a href="main.html#gallery" onclick="toggleMobileMenu()">Gallery</a>
+        <a href="main.html#products" onclick="toggleMobileMenu()">Products</a>
+        <a href="main.html#services" onclick="toggleMobileMenu()">Services</a>
+        <a href="main.html#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-wrapper" id="navbar">
+        <div class="nav-inner">
+            <a href="main.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">Haritha Lanka</span>
+                    <span class="logo-subtitle">Plantation</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="main.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="main.html#packages" class="nav-link">Investment</a>
+                <a href="main.html#gallery" class="nav-link">Gallery</a>
+                <a href="main.html#products" class="nav-link">Products</a>
+                <a href="main.html#services" class="nav-link">Services</a>
+                <a href="main.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-star"></i><span>Our Story</span></div>
+            <h1 class="hero-title">About <span>Haritha Lanka</span></h1>
+            <p class="hero-subtitle">Transforming Sri Lanka's Agarwood industry with world-class expertise and sustainable investment opportunities</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="main.html"><i class="fas fa-home"></i> Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>About Us</span>
+        </div>
+    </div>
+
+    <!-- About Intro -->
+    <section class="section">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="images/plantation.jpg" alt="Haritha Lanka Agarwood Plantation">
+            </div>
+            <div class="about-content reveal">
+                <h2>Who We <span>Are</span></h2>
+                <p>At <strong>Haritha Lanka Agarwood Plantation</strong>, we are more than just a plant nursery. We are a specialized agricultural enterprise dedicated to revolutionizing the Agarwood (Oud) industry in Sri Lanka. Our mission is to transform your idle land into a "Golden Investment" by providing world-class technical expertise and high-quality resources.</p>
+                <p class="sinhala"><strong>හරිත ලංකා ප්ලාන්ටේෂන්</strong> යනු හුදෙක් පැල තවානක් පමණක් නොවේ. අප ශ්‍රී ලංකාවේ අගාවුඩ් (වල්ලපට්ටා) වගා ක්ෂේත්‍රය නව මාවතකට යොමු කරන විශේෂිත කෘෂිකාර්මික ව්‍යාපාරයකි. අපගේ මූලික අරමුණ වන්නේ ඔබේ වගාබිම වටිනා "රන් ආකරයක්" බවට පත් කිරීම සඳහා අවශ්‍ය ලෝක මට්ටමේ තාක්ෂණික උපදෙස් සහ උසස් සම්පත් ලබා දීමයි.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section features-section">
+        <div class="section-header reveal">
+            <span class="section-label">Why Choose Us</span>
+            <h2 class="section-title">Our Excellence</h2>
+            <p class="section-subtitle">Premium quality, scientific methods, and guaranteed returns</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+                <h3 class="feature-title">Premium Quality Plants</h3>
+                <h3 class="feature-title sinhala">නීරෝගී පැල ලබාදීම</h3>
+                <p class="feature-desc">We provide healthy, high-yield <em>Gyrinops walla</em> (Agarwood) saplings.</p>
+                <p class="feature-desc sinhala">ඉහළ අස්වැන්නක් ලබාදෙන සවිමත් අගාවුඩ් පැල අපෙන් ලබාගත හැක.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon"><i class="fas fa-syringe"></i></div>
+                <h3 class="feature-title">Scientific Inoculation</h3>
+                <h3 class="feature-title sinhala">විද්‍යාත්මක එන්නත්කරණය</h3>
+                <p class="feature-desc">Advanced Inoculation (Vaccine) processes for maximum resin production.</p>
+                <p class="feature-desc sinhala">උසස්ම තත්ත්වයේ අගාවුඩ් රෙසින නිපදවීම සඳහා විද්‍යාත්මක වැක්සීන් සේවාව.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="feature-title">Secure Investment</h3>
+                <h3 class="feature-title sinhala">ආරක්ෂිත ආයෝජනය</h3>
+                <p class="feature-desc">Legally binding Buy-Back Agreements at <strong>Rs. 200,000/-</strong> per tree.</p>
+                <p class="feature-desc sinhala">රුපියල් ලක්ෂ 2 ක ස්ථාවර සහතික කළ මිලකට නැවත මිලදී ගැනීමේ නීත්‍යානුකූල ගිවිසුම්.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3 class="feature-title">End-to-End Guidance</h3>
+                <h3 class="feature-title sinhala">නිරන්තර මඟපෙන්වීම</h3>
+                <p class="feature-desc">From planting to harvest, we guide you every step with free technical support.</p>
+                <p class="feature-desc sinhala">පැල සිටුවීමේ සිට අස්වැන්න දක්වා නොමිලේ තාක්ෂණික සහාය.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section mission-section">
+        <div class="mission-grid">
+            <div class="mission-card reveal">
+                <span class="mission-label">Our Mission</span>
+                <h3 class="mission-title">Mission</h3>
+                <h3 class="mission-title sinhala">අපගේ මෙහෙවර</h3>
+                <p class="mission-text">To revolutionize Sri Lanka's Agarwood industry by providing sustainable investment opportunities, premium quality saplings, and scientific cultivation methods.</p>
+                <p class="mission-text sinhala">පාරිසරික සංරක්ෂණය සහතික කරමින් අපගේ ආයෝජකයින්ට උපරිම ප්‍රතිලාභ සහතික කරන විද්‍යාත්මක වගා ක්‍රම සහිත ශ්‍රී ලංකාවේ අගාවුඩ් කර්මාන්තය නව මට්ටමකට ඔසවා තැබීම.</p>
+            </div>
+            <div class="mission-card reveal">
+                <span class="mission-label">Our Vision</span>
+                <h3 class="mission-title">Vision</h3>
+                <h3 class="mission-title sinhala">අපගේ දැක්ම</h3>
+                <p class="mission-text">To become Sri Lanka's most trusted Agarwood plantation company, transforming thousands of acres into profitable "Golden Plantations".</p>
+                <p class="mission-text sinhala">ශ්‍රී ලංකාවේ වඩාත්ම විශ්වසනීය අගාවුඩ් වගා සමාගම බවට පත්වීම, අක්කර ගණනාවක් නිසරු ඉඩම් වටිනා "රන් වගාබිම්" බවට පත් කිරීම.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal"><span class="stat-number">7+</span><span class="stat-label">Years Experience</span><span class="stat-label sinhala">වසර අත්දැකීම</span></div>
+            <div class="stat-item reveal"><span class="stat-number">1000+</span><span class="stat-label">Happy Investors</span><span class="stat-label sinhala">සතුටු ආයෝජකයින්</span></div>
+            <div class="stat-item reveal"><span class="stat-number">50+</span><span class="stat-label">Acres Cultivated</span><span class="stat-label sinhala">වගා කළ අක්කර</span></div>
+            <div class="stat-item reveal"><span class="stat-number">100%</span><span class="stat-label">Buy-Back Guarantee</span><span class="stat-label sinhala">මිලදී ගැනීමේ සහතිකය</span></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="reveal">
+            <h2 class="cta-title">Ready to Start Your <span>Golden Investment?</span></h2>
+            <p class="cta-text">Join hundreds of satisfied investors who have transformed their idle land into profitable Agarwood plantations.</p>
+            <p class="cta-text sinhala">ඔබේ නිසරු ඉඩම වටිනා අගාවුඩ් වගාබිමක් බවට පත් කරගත් සතුටු ආයෝජකයින් සමඟ එක්වන්න.</p>
+            <div style="margin-top: 2rem;">
+                <a href="main.html#packages" class="btn-luxury btn-primary-luxury"><i class="fas fa-seedling"></i> View Investment Packages</a>
+                <a href="main.html" class="btn-luxury btn-outline-luxury"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Haritha Lanka Plantation</div>
+            <p class="footer-tagline">"Your Trusted Partner in Agarwood Investment"</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1K1o3QXuXY/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com/@agarwood_plantation" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@user7152430033836" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/94724015097" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-contact"><i class="fas fa-phone-alt"></i> +94 72 401 5097</div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haritha Lanka Plantation. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Premium Agarwood Investment | Kekirawa, Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/94724015097" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => { document.getElementById('preloader').classList.add('hidden'); }, 1500);
+        });
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 50) { navbar.classList.add('scrolled'); } else { navbar.classList.remove('scrolled'); }
+            if (window.scrollY > 500) { scrollTop.classList.add('visible'); } else { scrollTop.classList.remove('visible'); }
+        });
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
